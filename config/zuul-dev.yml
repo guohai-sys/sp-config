@@ -4,7 +4,12 @@ spring:
   cloud:
     config:
       override-none: true
-        
+  rabbitmq:
+    host: 192.168.64.140
+    port: 5672
+    username: admin
+    password: admin
+          
 server:
   port: 3001
   
@@ -19,6 +24,7 @@ zuul:
     item-service: /item-service/**
     user-service: /user-service/** 
     order-service: /order-service/**
+    
     #   访问/item-service/** 时将转发到item-service服务,就是一个转发项目，启动后可以直接访问其他的三个服务
     
 ribbon:
